@@ -3,26 +3,26 @@ A python library for interacting with subprocesses
 
 ## Classes
 
-PyInteract
+### PyInteract
 
 
-### Members
+#### Members
 
 
-#### __init__
+##### __init__
 Constructor
 
-##### Inputs
+###### Inputs
 | Name    | Required? | Description                          |
 | ------- | --------- | ------------------------------------ |
 | process | yes       | The name of the process to attach to |
 | *args   | no        | Any arguments to pass to the process |
 
 
-#### interact
+##### interact
 Used to for an individual interaction with the process
 
-##### Inputs
+###### Inputs
 | Name    | Required? | Description                          |
 | ------- | --------- | ------------------------------------ |
 | input   | yes       | The input to send to the process     |
@@ -30,18 +30,18 @@ Used to for an individual interaction with the process
 | max_timeout   | no        | How long to wait for any program response. Set to 0 to block indefinitely. Default: 0|
 | newline   | no        | Add a newline to the end of the input. Default: True|
 
-##### Output
+###### Output
 A string containing the result from the process
 
 
-#### is_alive
+##### is_alive
 Determines whether or not the child process is still alive
 
-##### Output
+###### Output
 True if the process is still running
 
-#### status_code
+##### status_code
 Returns the status code of the process
 
-##### Output
+###### Output
 An integer corresponding to the status code
