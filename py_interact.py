@@ -28,7 +28,6 @@ class PyInteract(object):
         self._t.daemon = True
         self._t.start()
 
-
     def interact(self, input, buffer_timeout=.1, max_timeout=0, newline=True):
         try:
             self._sub.stdin.write(input)
@@ -55,7 +54,7 @@ class PyInteract(object):
     def is_alive(self):
         return self._sub.poll() is None
 
-    def returncode(self):
+    def status_code(self):
         return self._sub.returncode
 
     @staticmethod
